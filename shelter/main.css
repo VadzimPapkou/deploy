@@ -43,7 +43,7 @@ h5 {
     color: #545454;
 }
 
-.l {
+.navigation-links__link {
     font-family: 'Arial', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -75,6 +75,11 @@ button.primary, button.secondary {
     border-radius: 100px;
 }
 
+button {
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
 button.primary {
     border: none;
     background: #F1CDB3;
@@ -83,9 +88,175 @@ button.primary {
 
 button.secondary {
     border: 2px solid #F1CDB3;
+    background: #fff;
     cursor: pointer;
 }
 
-button:hover {
+button:not(:disabled):hover {
     background: #FDDCC4;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_black > .logo__title {
+    color: #545454;
+}
+
+.logo_black > .logo__subtitle {
+    color: #292929;
+}
+
+.logo__title {
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+
+.logo__subtitle {
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.navigation-links {
+    width: 443px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-links > a {
+    color: #CDCDCD;
+    text-decoration: none;
+}
+
+.navigation-links > a.active {
+    color: #FAFAFA;
+    position: relative;
+}
+
+.navigation-links > a.active:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #F1CDB3;
+}
+
+.navigation-links_black > .navigation-links__link {
+    color: #545454;
+}
+
+.navigation-links_black > .navigation-links__link {
+    color: #545454;
+}
+
+.navigation-links_black > .navigation-links__link.active {
+    color: #292929;
+}
+
+.header {
+    padding: 30px 40px 0;
+    background-image: url("assets/start-screen-background.jpg");
+    background-repeat: no-repeat;
+    height: 908px;
+    background-position: center;
+    background-size: cover;
+}
+
+.navigation {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    background-image: url("assets/footer-background.png");
+    background-repeat: no-repeat;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+}
+
+.footer__inner {
+    height: 100%;
+    padding: 30px 40px 0;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__column {
+    max-width: 300px;
+}
+
+.footer__column > *:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.footer__column h4 {
+    color: #F1CDB3;
+}
+
+.footer__column h3 {
+    color: #fff;
+}
+
+.footer__row {
+    display: flex;
+    align-items: center;
+}
+
+.footer__row > *:first-child {
+    margin-right: 20px;
+}
+
+.pet-card {
+    max-width: 270px;
+    display: flex;
+    flex-direction: column;
+    background: #FAFAFA;
+    border-radius: 9px;
+    transition: transform 0.4s;
+}
+
+.pet-card:hover {
+    transform: scale(1.05);
+}
+
+.pet-card-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.pet-card-title {
+    margin: 30px auto 0;
+}
+
+.pet-card__learn-btn {
+    margin: 30px auto 30px auto;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
 }
